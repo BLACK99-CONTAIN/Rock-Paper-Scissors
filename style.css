@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #282c34; /* Darker background for better contrast */
+}
+
+h1 {
+    font-size: 5vmin;
+    box-shadow: 3px 10px 5px rgba(58, 51, 51, 0.5);
+    color: #61dafb; /* Light blue for a modern look */
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    height: 12vmin;
+    width: 100%;
+    line-height: 12vmin;
+    background-color: #20232a; /* Slightly lighter than body background */
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choice {
+    height: 170px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+    background-color: #20232a; /* Consistent with header background */
+    box-shadow: 5px 10px 50px rgba(77, 146, 164, 0.5); /* Matching the header color */
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top:2rem;
+    width: 80%; /* Set the width of the container */
+    height: auto;
+}
+.choice:hover {
+    cursor: pointer;
+    background-color: #61dafb; /* Same as header text color */
+    border-radius: 50%;
+    opacity: 0.8; /* Slightly less transparent for hover effect */
+}
+
+#newbut {
+    color: #20232a; /* Same as background */
+    background-color: #61dafb; /* Light blue */
+    height: 8vh;
+    width: 15vh;
+    border-radius: 1rem;
+    border: none; 
+    margin-top:20px;/* Remove border for cleaner look */
+}
+
+#newbut:hover {
+    background-color: #21a1f1; 
+    cursor:pointer;/* Darker blue for hover effect */
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    gap: 5rem;
+    margin-top: 4rem;
+}
+
+#user-score, #comp-score {
+    background-color: #eee;
+    height: 9vh;
+    width: 10vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player {
+    background-color: #61dafb; /* Light blue for consistency */
+    font-style: italic;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem; /* Add some padding for better look */
+    border-radius: 0.5rem; /* Slight border radius for modern look */
+}
+
+.msg-container {
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+#msg {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+
+}
