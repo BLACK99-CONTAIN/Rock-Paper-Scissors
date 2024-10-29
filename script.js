@@ -74,3 +74,4 @@ const showWinner=(userWin,userChoice,compChoice)=>{
     userscoreval.innerText=userSCore;
     compscoreval.innerText=compScore;
 };
+

@@ -65,7 +65,7 @@ img {
     width: 15vh;
     border-radius: 1rem;
     border: none; 
-    margin-top:20px;/* Remove border for cleaner look */
+    margin-top:14px;/* Remove border for cleaner look */
 }
 
 #newbut:hover {
@@ -101,16 +101,12 @@ img {
 }
 
 .msg-container {
-    margin-top: 4rem;
-    font-size: 2rem;
+
+    font-size: 4rem;
 }
 
 #msg {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
+   margin-top:10px;
 
 }
