@@ -1,77 +1,59 @@
 let choices = document.querySelectorAll(".choice");
-let score = document.querySelectorAll(".score");
-let newbut = document.querySelector("#newbut");
 let msg = document.querySelector("#msg");
-let userscoreval=document.querySelector("#user-score");
-let compscoreval=document.querySelector("#comp-score");
-let mincontain=document.querySelector(".min-contain");
+let userscoreval = document.querySelector("#user-score");
+let compscoreval = document.querySelector("#comp-score");
 let userSCore = 0;
 let compScore = 0;
 
 choices.forEach((choice) => {
+    console.log(`Adding event listener to choice with id: ${choice.getAttribute("id")}`);
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("id");
-
+        console.log("User selected:", userChoice);
         playgame(userChoice);
     });
 });
 
 const drawgame = () => {
-
-    msg.innerText="draw";
-    msg.style.color="purple";
+    msg.innerText = "draw"; // Fixed typo here
+    msg.style.color = "purple";
 }
 
-
 const playgame = (userChoice) => {
-    //generate computer choice
     console.log("user choice= ", userChoice);
     const compChoice = getcompchoice();
     console.log("comp choice= ", compChoice);
     if (userChoice === compChoice) {
         drawgame();
-        msg.innerTexr="draw";
-   
-    }
-    else {
+    } else {
         let userWin = true;
         if (userChoice === "rock") {
-            // User chose rock
-            // User wins if computer chose scissors, otherwise user loses
-            userWin = compChoice === "paper" ? false : true;
+            userWin = compChoice === "scissors";
         } else if (userChoice === "paper") {
-            // User chose paper
-            // User wins if computer chose rock, otherwise user loses
-            userWin = compChoice === "scissors" ? false : true;
+            userWin = compChoice === "rock";
         } else {
-            // User chose scissors
-            // User wins if computer chose paper, otherwise user loses
-            userWin = compChoice === "rock" ? false : true;
+            userWin = compChoice === "paper";
         }
-        
-        showWinner(userWin,userChoice,compChoice);
+        showWinner(userWin, userChoice, compChoice);
     }
-
 }
 
 const getcompchoice = () => {
-    const arr = ["rock", "paper", "scissors"];//option for random value
-    const arrid = Math.floor(Math.random() * 3);//for getting value 0 to 2
-    return arr[arrid];//this gave me options and there id 
+    const arr = ["rock", "paper", "scissors"];
+    const arrid = Math.floor(Math.random() * 3);
+    return arr[arrid];
 }
 
-const showWinner=(userWin,userChoice,compChoice)=>{
-      if(userWin){
+const showWinner = (userWin, userChoice, compChoice) => {
+    if (userWin) {
         userSCore++;
-        msg.innerText=`You win`;
-        msg.style.color="green";
-     
-      }else{
+        msg.innerText = "You win";
+        msg.style.color = "green";
+    } else {
         compScore++;
-        msg.innerText=`Computer win`;
-        msg.style.color="red";
+        msg.innerText = "Computer wins";
+        msg.style.color = "red";
     }
-    userscoreval.innerText=userSCore;
-    compscoreval.innerText=compScore;
-};
-
+    userscoreval.innerText = userSCore;
+    compscoreval.innerText = compScore;
+}
