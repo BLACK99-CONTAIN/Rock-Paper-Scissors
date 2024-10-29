@@ -18,7 +18,7 @@ choices.forEach((choice) => {
 
 const drawgame = () => {
 
-    msg.innerTexr="draw";
+    msg.innerText="draw";
     msg.style.color="purple";
 }
 
